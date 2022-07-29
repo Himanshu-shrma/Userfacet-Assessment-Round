@@ -7,17 +7,18 @@
     <title>Title</title>
 </head>
 <body>
-    
+    <center>
     <h1>Home Page </h1>
     {% if form %}
     <form action="" method="POST">
         {% csrf_token %}
-        {{form}}
+        {{form.as_p}}
         <input type="submit" value="Submit" class="btn btn-secondary">
 
     </form>
     {%else%}
     {{message}}
     {% endif %}
+    <center>
 </body>
 </html>
