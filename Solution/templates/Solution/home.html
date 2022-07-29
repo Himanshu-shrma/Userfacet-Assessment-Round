@@ -8,6 +8,16 @@
 </head>
 <body>
     
-    <h1>Hello World</h1>
+    <h1>Home Page </h1>
+    {% if form %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Submit" class="btn btn-secondary">
+
+    </form>
+    {%else%}
+    {{message}}
+    {% endif %}
 </body>
 </html>
